@@ -11,7 +11,8 @@ export const ErrorCodes = {
   INVALID_CREDENTIALS: "INVALID_CREDENTIALS",
 
   BOOK_UNAVAILABLE: "BOOK_UNAVAILABLE",
+
+  VALIDATION_ERROR: "VALIDATION_ERROR",
 } as const;
 
-export type ErrorCode =
-  (typeof ErrorCodes)[keyof typeof ErrorCodes];
+export type ErrorCode = (typeof ErrorCodes)[keyof typeof ErrorCodes];

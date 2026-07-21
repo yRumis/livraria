@@ -6,4 +6,10 @@ export class BookMockRepository implements IBookRepository {
   async findAll(): Promise<ReadonlyArray<Book>> {
     return [...books];
   }
+
+  async create(book: Book): Promise<Book> {
+    books.push(book)
+
+    return book;
+  }
 }

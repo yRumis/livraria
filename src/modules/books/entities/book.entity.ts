@@ -5,7 +5,7 @@ export interface Book {
   publishedYear: number;
   available: boolean;
 
-  authorId: number;
+  authorId: string;
   categoryId: string;
 
   createdAt: Date;
