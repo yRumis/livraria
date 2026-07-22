@@ -8,6 +8,8 @@ export class CreateBookService {
   constructor(private readonly _repository: IBookRepository) {}
 
   async execute(dto: CreateBookDTO): Promise<Book> {
+        console.log("estamos no service dos LIVROS")
+
     const book: Book = {
       id: randomUUID(),
       title: dto.title,

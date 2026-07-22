@@ -13,6 +13,8 @@ export const ErrorCodes = {
   BOOK_UNAVAILABLE: "BOOK_UNAVAILABLE",
 
   VALIDATION_ERROR: "VALIDATION_ERROR",
+
+  USER_ALREADY_EXISTS: "USER_ALREADY_EXISTS",
 } as const;
 
 export type ErrorCode = (typeof ErrorCodes)[keyof typeof ErrorCodes];

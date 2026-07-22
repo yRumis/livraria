@@ -10,6 +10,10 @@ const controller = makeBookController();
 const createBookController = makeCreateBookController();
 
 booksRoutes.get("/", controller.index.bind(controller));
-booksRoutes.post("/", validateCreateBook, createBookController.handle.bind(createBookController))
+booksRoutes.post(
+  "/",
+  validateCreateBook,
+  createBookController.handle.bind(createBookController),
+);
 
 export { booksRoutes };
