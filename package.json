@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsx watch src/server.ts"
+    "start": "tsx watch src/server.ts",
+    "typeorm": "node --import tsx ./node_modules/typeorm/cli.js",
+    "migration:generate": "npm run typeorm -- migration:generate -d src/shared/database/data-source.ts",
+    "migration:run": "npm run typeorm -- migration:run -d src/shared/database/data-source.ts",
+    "migration:revert": "npm run typeorm -- migration:revert -d src/shared/database/data-source.ts"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +27,7 @@
     "prettier": "^3.9.5",
     "ts-node": "^10.9.2",
     "tsx": "^4.23.1",
+    "typeorm-ts-node-esm": "^0.3.20",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.64.0"
   },
@@ -30,6 +35,9 @@
     "bcrypt": "^6.0.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "joi": "^18.2.3"
+    "joi": "^18.2.3",
+    "pg": "^8.22.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.26"
   }
 }
